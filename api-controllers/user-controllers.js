@@ -58,12 +58,10 @@ async function checkUser({ username, password }) {
     //assign login token
     const token = jwt.sign({ userID: user.id }, config.secretString, { expiresIn: '1d' });
     const dataUser = {
-        user: {
             id: user.id,
             username: user.username
-        }
     };
-    const data = { dataUser, token }
+    const data = {dataUser, token }
     return { ...STATUS_CODE.SUCCESS_LOGIN, data }
 }
 

@@ -1,7 +1,7 @@
 const express = require('express');
 const app = express();
 const bodyParser = require('body-parser');
-const server = require("http").Server(app);
+// const server = require("http").Server(app);
 const mongoose = require('mongoose');
 const { MONGO_URI } = require('./config');
 
@@ -26,6 +26,7 @@ app.get('/', (req, res) => {
    res.send('Hello this is CHATTER application!');
 });
 let PORT = config.PORT;
-server.listen(PORT, ()=>{
+app.listen(PORT, ()=>{
     console.log("server listen on port "+PORT+" with "+config.HOST);
 });
+module.exports = app;
