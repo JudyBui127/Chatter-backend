@@ -1,0 +1,29 @@
+{
+  "name": "chatter-backend",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JudyBui127/Chatter-backend.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/JudyBui127/Chatter-backend/issues"
+  },
+  "homepage": "https://github.com/JudyBui127/Chatter-backend#readme",
+  "dependencies": {
+    "bcrypt": "^3.0.8",
+    "express": "^4.17.1",
+    "jsonwebtoken": "^8.5.1",
+    "mongoose": "^5.12.2"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.7"
+  }
+}
