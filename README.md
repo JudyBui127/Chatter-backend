@@ -1,4 +1,5 @@
 # CHATTER BACKEND API
+A similar application to Twitter with further CRUD functional APIs.
 - Documentation: https://hackmd.io/@nwoLh2teRuWC1WEZ9Hoeqw/SJ35v03Nd
 - Github Repo: https://github.com/JudyBui127/Chatter-backend
 ## HOW TO RUN
