@@ -1,0 +1,262 @@
+{
+	"info": {
+		"_postman_id": "b5f9a7fb-9c51-4882-a96d-ffe5147ffc2c",
+		"name": "CHATTER",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Register",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"username\":\"judy\",\r\n    \"password\":\"12345\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:81/api/user/register",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "81",
+					"path": [
+						"api",
+						"user",
+						"register"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"username\":\"david2\",\r\n    \"password\":\"12345\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:81/api/user/login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "81",
+					"path": [
+						"api",
+						"user",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create tweet",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySUQiOiI2MDVlMWYwYmZlYmEyMTVlOTQzYzk3NGMiLCJpYXQiOjE2MTY4MTIxMTgsImV4cCI6MTYxNjg5ODUxOH0.-rpbYlihHXMYhG4houSDnVtjF7sXWgloP4emDEyD86g",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"content\":\"Hello World! This is my first tweet on chatter, love in the air tonight!!!\",\r\n    \"userId\":\"\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:81/api/tweet/create",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "81",
+					"path": [
+						"api",
+						"tweet",
+						"create"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Read all",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySUQiOiI2MDVlMWYwYmZlYmEyMTVlOTQzYzk3NGMiLCJpYXQiOjE2MTY4MTIxMTgsImV4cCI6MTYxNjg5ODUxOH0.-rpbYlihHXMYhG4houSDnVtjF7sXWgloP4emDEyD86g",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"userId\":\"605e1f0bfeba215e943c974c\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:81/api/tweet/readAll",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "81",
+					"path": [
+						"api",
+						"tweet",
+						"readAll"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Read 1 tweet",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySUQiOiI2MDVlMWYwYmZlYmEyMTVlOTQzYzk3NGMiLCJpYXQiOjE2MTY4MTIxMTgsImV4cCI6MTYxNjg5ODUxOH0.-rpbYlihHXMYhG4houSDnVtjF7sXWgloP4emDEyD86g",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"userId\":\"605e1f0bfeba215e943c974c\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:81/api/tweet/read/605e9958d049ad44ec6fa5ef",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "81",
+					"path": [
+						"api",
+						"tweet",
+						"read",
+						"605e9958d049ad44ec6fa5ef"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update tweet",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySUQiOiI2MDVlMWYwYmZlYmEyMTVlOTQzYzk3NGMiLCJpYXQiOjE2MTY4MTIxMTgsImV4cCI6MTYxNjg5ODUxOH0.-rpbYlihHXMYhG4houSDnVtjF7sXWgloP4emDEyD86g",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"content\":\"Hello Wolrd! This is the updated tweet!!!\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:81/api/tweet/update/605e9958d049ad44ec6fa5ef",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "81",
+					"path": [
+						"api",
+						"tweet",
+						"update",
+						"605e9958d049ad44ec6fa5ef"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete tweet",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySUQiOiI2MDVlMWYwYmZlYmEyMTVlOTQzYzk3NGMiLCJpYXQiOjE2MTY4MTIxMTgsImV4cCI6MTYxNjg5ODUxOH0.-rpbYlihHXMYhG4houSDnVtjF7sXWgloP4emDEyD86g",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"content\":\"Hello World! This is the updated tweet!!!\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:81/api/tweet/delete/605ea4d6e06a14550c12d9a8",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "81",
+					"path": [
+						"api",
+						"tweet",
+						"delete",
+						"605ea4d6e06a14550c12d9a8"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}

@@ -40,4 +40,4 @@ describe('/POST Register', function() {
            })
            .end(done);
     }); 
-}); //this unit test for register api also needs to verify valid password, currently missing this part
+}); 

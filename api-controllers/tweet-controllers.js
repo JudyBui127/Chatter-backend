@@ -1,8 +1,9 @@
 const mongoose = require("mongoose");
-const jwt = require('jsonwebtoken');
+mongoose.set('useFindAndModify', false);
+// const jwt = require('jsonwebtoken');
 // let path = require("path");
 const Tweet = require('../models/tweet');
-let config = require('./../config');
+// let config = require('./../config');
 
 module.exports = {
     createTweet,
@@ -13,6 +14,7 @@ module.exports = {
 };
 const STATUS_CODE = {
    SUCCESS_ALL: { status: 200, message: "Success!" },
+   SUCCESS_DELETE: { status: 200, message: "Deleted tweet!" },
     BAD_REQUEST: { status: 400, message: 'Bad request!' },
     FAILED_ACTION: { status: 424, message: 'Failed to tweet!' },
     UNAUTHORIZED: { status: 401, message: 'Unauthorized!' },
@@ -36,16 +38,23 @@ function createTweet(req, res) {
 
 //READ ALL TWEETS FROM USER
 function readAllTweet(req, res) {
-    const allTweet =  Tweet.findAll({ postedBy: req.body.user._id});
-    if (!allTweet) return STATUS_CODE.NOT_FOUND;
-    res.json(allTweet);
+    // const allTweet =  Tweet.find({ postedBy: req.body.userId});
+    // if (!allTweet) return STATUS_CODE.NOT_FOUND;
+    // res.send(allTweet);
+    Tweet.find({ postedBy : req.body.userId })
+    .then((results, errors) => {
+        res.send(results);
+    })
+    .catch(err => handleException(err, res))
 }
 
 //READ 1 TWEET
 function readTweet(req, res) {
-    const tweet = Tweet.findById({ _id: req.params.id});
-    if (!tweet) return STATUS_CODE.NOT_FOUND;
-    res.json(tweet);
+    Tweet.find({ _id: req.params.id })
+    .then(result  => 
+        res.send(result)
+    )
+    .catch(err => handleException(err, res))
 }
 
 //UPDATE TWEET
@@ -62,11 +71,11 @@ function updateTweet(req,res){
 
 //DELETE TWEET
 function deleteTweet(req,res){
-    const tweetId=req.params.id;
-    del(tweetId)
-    .then(data => res.send(data))
+    Tweet.findByIdAndDelete({ _id: req.params.id })
+    .then(result => res.send(STATUS_CODE.SUCCESS_DELETE))
     .catch(err => handleException(err, res))
 }
+
 
 //HELPER FUNCTIONS
 
@@ -88,8 +97,13 @@ async function update(tweetId,updatedTweet){
 
 }
 
-async function del(tweetId){
-    const deleteTweet= await Tweet.findByIdAndDelete(tweetId);
-    if(!newUpdatedTweet) return STATUS_CODE.NOT_FOUND;
-    return {...STATUS_CODE.SUCCESS_ALL}
+// async function del(tweetId){
+//     const deleteTweet= await Tweet.findByIdAndDelete(tweetId);
+//     if(deleteTweet) return STATUS_CODE.NOT_FOUND;
+//     return {...STATUS_CODE.SUCCESS_ALL}
+// }
+
+function handleException(error, res) {
+    console.log(error.message)
+    res.send(STATUS_CODE.INTERNAL_ERROR)
 }
