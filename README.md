@@ -4,7 +4,7 @@ A similar application to Twitter with further CRUD functional APIs.
 - Github Repo: https://github.com/JudyBui127/Chatter-backend
 ## HOW TO RUN
 ### 1. Set up environment
-- Add config.js file
+- Add config.js file to '/' main project folder
 - Run npm
 ``` 
 npm install
