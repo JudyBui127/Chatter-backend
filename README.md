@@ -14,7 +14,7 @@ npm install
 nodemon server.js
 ```
 ### 3. Test APIs on Postman
-- Import this json file to Postman: CHATTER.postman_collection.json
+- Import this json file to Postman: CHATTER.postman_collection.json (found in this project folder)
 - Test API requests and responses as following 
 ### 4. Run unit test
 - user-test.js
