@@ -50,7 +50,7 @@ npm test
     }
 } 
 ```
-###[POST] /api/user/register
+### [POST] /api/user/register
 ```
 {
     "status": 201,
