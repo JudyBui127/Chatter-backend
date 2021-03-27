@@ -12,7 +12,7 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\r\n    \"username\":\"judy\",\r\n    \"password\":\"12345\"\r\n}",
+					"raw": "{\r\n    \"username\":\"Eddie\",\r\n    \"password\":\"12345678\"\r\n}",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -42,7 +42,7 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\r\n    \"username\":\"david2\",\r\n    \"password\":\"12345\"\r\n}",
+					"raw": "{\r\n    \"username\":\"david\",\r\n    \"password\":\"12345\"\r\n}",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -72,13 +72,13 @@
 				"header": [
 					{
 						"key": "Authorization",
-						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySUQiOiI2MDVlMWYwYmZlYmEyMTVlOTQzYzk3NGMiLCJpYXQiOjE2MTY4MTIxMTgsImV4cCI6MTYxNjg5ODUxOH0.-rpbYlihHXMYhG4houSDnVtjF7sXWgloP4emDEyD86g",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySUQiOiI2MDVlMTkzN2UzNDczYjViYjBmOGFmMjIiLCJpYXQiOjE2MTY4NjAzNzAsImV4cCI6MTYxNjk0Njc3MH0.3YGhErHaS00uv1qcbKqOj3-zboses6AbvSEIDzFg4PM",
 						"type": "text"
 					}
 				],
 				"body": {
 					"mode": "raw",
-					"raw": "{\r\n    \"content\":\"Hello World! This is my first tweet on chatter, love in the air tonight!!!\",\r\n    \"userId\":\"\"\r\n}",
+					"raw": "{\r\n    \"content\":\"Hello World! This is a tweet to be deleted!\",\r\n    \"userId\":\"605e1937e3473b5bb0f8af22\"\r\n}",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -118,7 +118,7 @@
 				],
 				"body": {
 					"mode": "raw",
-					"raw": "{\r\n    \"userId\":\"605e1f0bfeba215e943c974c\"\r\n}",
+					"raw": "{\r\n    \"userId\":\"605e1937e3473b5bb0f8af22\"\r\n}",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -158,7 +158,7 @@
 				],
 				"body": {
 					"mode": "raw",
-					"raw": "{\r\n    \"userId\":\"605e1f0bfeba215e943c974c\"\r\n}",
+					"raw": "",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -166,7 +166,7 @@
 					}
 				},
 				"url": {
-					"raw": "http://localhost:81/api/tweet/read/605e9958d049ad44ec6fa5ef",
+					"raw": "http://localhost:81/api/tweet/read/605f55017fd28d0bb0b879c2",
 					"protocol": "http",
 					"host": [
 						"localhost"
@@ -176,7 +176,7 @@
 						"api",
 						"tweet",
 						"read",
-						"605e9958d049ad44ec6fa5ef"
+						"605f55017fd28d0bb0b879c2"
 					]
 				}
 			},
@@ -189,14 +189,13 @@
 				"header": [
 					{
 						"key": "Authorization",
-						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySUQiOiI2MDVlMWYwYmZlYmEyMTVlOTQzYzk3NGMiLCJpYXQiOjE2MTY4MTIxMTgsImV4cCI6MTYxNjg5ODUxOH0.-rpbYlihHXMYhG4houSDnVtjF7sXWgloP4emDEyD86g",
-						"type": "text",
-						"disabled": true
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySUQiOiI2MDVlMTkzN2UzNDczYjViYjBmOGFmMjIiLCJpYXQiOjE2MTY4NjAzNzAsImV4cCI6MTYxNjk0Njc3MH0.3YGhErHaS00uv1qcbKqOj3-zboses6AbvSEIDzFg4PM",
+						"type": "text"
 					}
 				],
 				"body": {
 					"mode": "raw",
-					"raw": "{\r\n    \"content\":\"Hello Wolrd! This is the updated tweet!!!\"\r\n}",
+					"raw": "{\r\n    \"content\":\"Hello Wolrd! This is the successfully updated tweet!!!\"\r\n}",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -204,7 +203,7 @@
 					}
 				},
 				"url": {
-					"raw": "http://localhost:81/api/tweet/update/605e9958d049ad44ec6fa5ef",
+					"raw": "http://localhost:81/api/tweet/update/605f55427fd28d0bb0b879c4",
 					"protocol": "http",
 					"host": [
 						"localhost"
@@ -214,7 +213,7 @@
 						"api",
 						"tweet",
 						"update",
-						"605e9958d049ad44ec6fa5ef"
+						"605f55427fd28d0bb0b879c4"
 					]
 				}
 			},
@@ -233,7 +232,7 @@
 				],
 				"body": {
 					"mode": "raw",
-					"raw": "{\r\n    \"content\":\"Hello World! This is the updated tweet!!!\"\r\n}",
+					"raw": "",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -241,7 +240,7 @@
 					}
 				},
 				"url": {
-					"raw": "http://localhost:81/api/tweet/delete/605ea4d6e06a14550c12d9a8",
+					"raw": "http://localhost:81/api/tweet/delete/605f558a7fd28d0bb0b879c5",
 					"protocol": "http",
 					"host": [
 						"localhost"
@@ -251,7 +250,7 @@
 						"api",
 						"tweet",
 						"delete",
-						"605ea4d6e06a14550c12d9a8"
+						"605f558a7fd28d0bb0b879c5"
 					]
 				}
 			},
