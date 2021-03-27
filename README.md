@@ -167,16 +167,16 @@ npm test
 ## UNIT TESTS
 ### 1. user-test.js
 ```
-decribe('/POST Login', function(){});
-decribe('/POST Register', function(){});
+decribe('/POST Login', function(){...});
+decribe('/POST Register', function(){...});
 ```
 
 ### 2. tweet-test.js
 
 ```
-describe('/POST Create Tweet', function(){});
-describe('/GET Read all tweets of a user', function(){});
-describe('/GET Read a tweet', function() {});
-describe('/PUT Update Tweet', function() {});
-describe('/DELETE delete Tweet', function() {});;
+describe('/POST Create Tweet', function(){...});
+describe('/GET Read all tweets of a user', function(){...});
+describe('/GET Read a tweet', function() {...});
+describe('/PUT Update Tweet', function() {...});
+describe('/DELETE delete Tweet', function() {...});;
 
