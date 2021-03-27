@@ -1,11 +1,12 @@
 var bcrypt = require('bcrypt');
 var mongoose = require("mongoose");
+const Tweet = require('./tweet');
+const Schema = mongoose.Schema;
 // var uniqueValidator = require('mongoose-unique-validator');
 const userSchema = new mongoose.Schema({
     _id: mongoose.Schema.Types.ObjectId,
     username: {
         type: String,
-        required: true,
         unique: true,
         match: [/^[a-zA-Z0-9]+$/, 'is invalid'], 
         index: true
@@ -13,9 +14,9 @@ const userSchema = new mongoose.Schema({
 
     password: {
         type: String,
-        required: true,
         index: true
     },     
+    tweets:[{ref: 'Tweet', type: Schema.Types.ObjectId}]
 });
 // UserSchema.plugin(uniqueValidator, {message: 'is already taken.'});
 userSchema.pre('save', function (next) {
@@ -29,4 +30,4 @@ userSchema.pre('save', function (next) {
     });  
 });
 
-module.exports = mongoose.model("users",userSchema) ;
+module.exports = mongoose.model('User',userSchema) ;

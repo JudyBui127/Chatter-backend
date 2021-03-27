@@ -27,7 +27,7 @@ function createTweet(req, res) {
         content: req.body.content,
         created: Date.now(),
         updated: Date.now(),
-        postedBy=req.body.user._id
+        postedBy:req.body.userId
     };
     create(newTweet)
     .then(data => res.send(data))
@@ -36,14 +36,14 @@ function createTweet(req, res) {
 
 //READ ALL TWEETS FROM USER
 function readAllTweet(req, res) {
-    const allTweet = await Tweet.findAll({ postedBy: req.body.user._id});
+    const allTweet =  Tweet.findAll({ postedBy: req.body.user._id});
     if (!allTweet) return STATUS_CODE.NOT_FOUND;
     res.json(allTweet);
 }
 
 //READ 1 TWEET
 function readTweet(req, res) {
-    const tweet = await Tweet.findById({ _id: req.params.id});
+    const tweet = Tweet.findById({ _id: req.params.id});
     if (!tweet) return STATUS_CODE.NOT_FOUND;
     res.json(tweet);
 }
