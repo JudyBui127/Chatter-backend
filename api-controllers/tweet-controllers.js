@@ -19,18 +19,7 @@ const STATUS_CODE = {
     NOT_FOUND: { status: 404, message: 'Not found!' },
     INTERNAL_ERROR: { status: 500, message: 'Internal Server Error!' },
 }
-function createTweet(req, res) {
-    const newTweet = {
-        _id: new mongoose.Types.ObjectId(),
-        content: req.body.content,
-        created: Date.now(),
-        updated: Date.now(),
-        postedBy=req.user._id
-    };
-    create(newTweet)
-    .then(data => res.send(data))
-    .catch(err => handleException(err, res))
-}
+
 //CREATE NEW TWEET
 function createTweet(req, res) {
     const newTweet = {
