@@ -50,7 +50,7 @@ function readAllTweet(req, res) {
 
 //READ 1 TWEET
 function readTweet(req, res) {
-    Tweet.find({ _id: req.params.id })
+    Tweet.findOne({ _id: req.params.id })
     .then(result  => 
         res.send(result)
     )
