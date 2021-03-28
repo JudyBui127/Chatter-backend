@@ -91,17 +91,11 @@ return STATUS_CODE.FAILED_ACTION;
 }
 
 async function update(tweetId,updatedTweet){
-    const newUpdatedTweet = await Tweet.findByIdAndUpdate(tweetId,updatedTweet);
+    const newUpdatedTweet = await Tweet.findByIdAndUpdate(tweetId,updatedTweet,{new: true});
     if(!newUpdatedTweet) return STATUS_CODE.BAD_REQUEST;
     return {...STATUS_CODE.SUCCESS_ALL, newUpdatedTweet}
 
 }
-
-// async function del(tweetId){
-//     const deleteTweet= await Tweet.findByIdAndDelete(tweetId);
-//     if(deleteTweet) return STATUS_CODE.NOT_FOUND;
-//     return {...STATUS_CODE.SUCCESS_ALL}
-// }
 
 function handleException(error, res) {
     console.log(error.message)
